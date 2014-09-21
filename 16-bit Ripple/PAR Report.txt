@@ -1,0 +1,30 @@
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of  18,224    0%
+  Number of Slice LUTs:                         48 out of   9,112    1%
+    Number used as logic:                       48 out of   9,112    1%
+      Number using O6 output only:              16
+      Number using O5 output only:               0
+      Number using O5 and O6:                   32
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    48 out of   2,278    2%
+  Number of MUXCYs used:                         0 out of   4,556    0%
+  Number of LUT Flip Flop pairs used:           48
+    Number with an unused Flip Flop:            48 out of      48  100%
+    Number with an unused LUT:                   0 out of      48    0%
+    Number of fully used LUT-FF pairs:           0 out of      48    0%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        50 out of     232   21%

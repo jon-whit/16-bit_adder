@@ -1,0 +1,116 @@
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fourbit_carrysel.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 41
+#      INV                         : 1
+#      LUT2                        : 35
+#      LUT3                        : 5
+# IO Buffers                       : 14
+#      IBUF                        : 9
+#      OBUF                        : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   41  out of   9112     0%  
+    Number used as Logic:                41  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     41
+   Number with an unused Flip Flop:      41  out of     41   100%  
+   Number with an unused LUT:             0  out of     41     0%  
+   Number of fully used LUT-FF pairs:     0  out of     41     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    232     6%  
+
+
+=========================================================================
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 11.957ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 93 / 5
+-------------------------------------------------------------------------
+Delay:               11.957ns (Levels of Logic = 21)
+  Source:            X<0> (PAD)
+  Destination:       Cout (PAD)
+
+  Data Path: X<0> to Cout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.788  X_0_IBUF (X_0_IBUF)
+     begin scope: 'stage1:X<0>'
+     begin scope: 'stage1/s0:X'
+     begin scope: 'stage1/s0/h1:X'
+     LUT2:I0->O            1   0.203   0.684  Cout1 (Cout)
+     end scope: 'stage1/s0/h1:Cout'
+     LUT2:I0->O            2   0.203   0.617  Cout1 (Cout)
+     end scope: 'stage1/s0:Cout'
+     begin scope: 'stage1/s1:Cin'
+     begin scope: 'stage1/s1/h2:Y'
+     LUT2:I1->O            1   0.205   0.580  Cout1 (Cout)
+     end scope: 'stage1/s1/h2:Cout'
+     LUT2:I1->O            2   0.205   0.617  Cout1 (Cout)
+     end scope: 'stage1/s1:Cout'
+     begin scope: 'stage1/s2:Cin'
+     begin scope: 'stage1/s2/h2:Y'
+     LUT2:I1->O            1   0.205   0.580  Cout1 (Cout)
+     end scope: 'stage1/s2/h2:Cout'
+     LUT2:I1->O            2   0.205   0.617  Cout1 (Cout)
+     end scope: 'stage1/s2:Cout'
+     begin scope: 'stage1/s3:Cin'
+     begin scope: 'stage1/s3/h2:Y'
+     LUT2:I1->O            1   0.205   0.580  Cout1 (Cout)
+     end scope: 'stage1/s3/h2:Cout'
+     LUT2:I1->O            1   0.205   0.684  Cout1 (Cout)
+     end scope: 'stage1/s3:Cout'
+     end scope: 'stage1:Cout'
+     begin scope: 'm4:B'
+     LUT3:I1->O            1   0.203   0.579  O1 (O)
+     end scope: 'm4:O'
+     OBUF:I->O                 2.571          Cout_OBUF (Cout)
+    ----------------------------------------
+    Total                     11.957ns (5.632ns logic, 6.325ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
